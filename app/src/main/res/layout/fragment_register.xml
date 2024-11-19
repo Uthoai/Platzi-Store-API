@@ -1,10 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.registration.RegisterFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_margin="50dp"
+            android:src="@mipmap/ic_launcher_round"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/et_userName"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:hint="@string/user_name"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            tools:ignore="Autofill"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <EditText
+            android:id="@+id/et_userEmail"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:selectAllOnFocus="true"
+            tools:ignore="Autofill"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            tools:ignore="Autofill"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/register"
+            android:layout_marginHorizontal="32dp"/>
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="64dp"
+            android:text="@string/signin"
+            android:layout_marginHorizontal="32dp"/>
+
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="64dp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+</ScrollView>

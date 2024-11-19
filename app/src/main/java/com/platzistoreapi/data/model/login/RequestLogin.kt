@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import androidx.annotation.Keep
 
 @Keep
-data class ResponseRequestLogin(
+data class RequestLogin(
     @SerializedName("email")
     val email: String? = null,
     @SerializedName("password")
