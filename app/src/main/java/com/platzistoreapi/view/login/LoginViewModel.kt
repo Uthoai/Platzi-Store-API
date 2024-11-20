@@ -22,20 +22,14 @@ class LoginViewModel @Inject constructor(private val repository: PlatziRepositor
 
     fun login(requestLogin: RequestLogin){
         _loginResponse.postValue(DataState.Loading())
+
         viewModelScope.launch {
-            val response = repository.login(requestLogin)
+            val response = repository.login(requestLogin).body()
 
-            if (response.isSuccessful){
-
-                try {
-                    val data = Gson().fromJson(response.body()?.string().toString(), ResponseLogin::class.java)
-                    _loginResponse.postValue(DataState.Success(data))
-                }catch (e:Exception){
-                    _loginResponse.postValue(DataState.Error(e.message.toString()))
-                }
-
-            }else{
-                _loginResponse.postValue(DataState.Error(response.message()))
+            try {
+                _loginResponse.postValue(DataState.Success(response))
+            }catch (e:Exception){
+                _loginResponse.postValue(DataState.Error(e.message.toString()))
             }
         }
     }
