@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.platzistoreapi.ProfileFragment"
+        android:name="com.platzistoreapi.view.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action

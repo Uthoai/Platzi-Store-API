@@ -59,7 +59,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
                     Log.d("TagToken", "ACCESS_TOKEN: ${prefsManager.getPrefs(ACCESS_TOKEN)}")
                     Log.d("TagToken", "REFRESH_TOKEN: ${prefsManager.getPrefs(REFRESH_TOKEN)}")
 
-                    //findNavController().navigate(R.id.action_loginFragment_to_profileFragment)
+                    findNavController().navigate(R.id.action_loginFragment_to_profileFragment)
                 }
             }
         }

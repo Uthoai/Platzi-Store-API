@@ -79,4 +79,10 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
 
+    //coil
+    implementation(libs.coil)
+
+    // paging 3
+    implementation(libs.paging)
+
 }
